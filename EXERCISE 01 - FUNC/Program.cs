@@ -11,11 +11,9 @@ namespace EXERCISE_01___FUNC {
             list.Add(new Product("TV", 900.0));
             list.Add(new Product("Mouse",50.00));
             list.Add(new Product("Tablet",350.00));
-            list.Add(new Product("HD Case",80.90));
+            list.Add(new Product("HD Case",80.90));           
 
-            Func<Product, string> func = NameUpper;
-
-            List<string> result = list.Select(func).ToList();
+            List<string> result = list.Select(p => p.Name.ToUpper()).ToList();
             foreach(string s in result) {
                 Console.WriteLine(s);
             }
